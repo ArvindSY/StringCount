@@ -28,9 +28,9 @@ namespace ConsoleApp1
                     {
                         for (j = 0; j < Str.Length; j++)
                         {
-                            if (Str[i] == Str[j])
+                            if (Str[i].ToString().ToLower() == Str[j].ToString().ToLower())
                             {
-                                if (NewStr.Contains(Str[i]) == false)
+                                if (NewStr.Contains(Str[i].ToString().ToLower()) == false)
                                 {
                                     if (k == 0)
                                     {
@@ -53,14 +53,14 @@ namespace ConsoleApp1
                     {
                         if (l == 0)
                         {
-                            MatchLength = Str.Count(x => (x == NewStr[l]));
+                            MatchLength = Str.Count(x => (x.ToString().ToLower() == NewStr[l].ToString().ToLower()));
                             MatchValue = NewStr[l].ToString();
                         }
                         else
                         {
-                            if (MatchLength < Str.Count(x => (x == NewStr[l])))
+                            if (MatchLength < Str.Count(x => (x.ToString().ToLower() == NewStr[l].ToString().ToLower())))
                             {
-                                MatchLength = Str.Count(x => (x == NewStr[l]));
+                                MatchLength = Str.Count(x => (x.ToString().ToLower() == NewStr[l].ToString().ToLower()));
                                 MatchValue = NewStr[l].ToString();
                             }
                         }
